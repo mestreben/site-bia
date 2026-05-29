@@ -607,6 +607,35 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
+<style>
+.eael-simple-menu-container.eael-simple-menu-hamburger {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-simple-menu-toggle {
+  display: inline-flex !important;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-nav-menu-wrapper {
+  width: auto !important;
+  min-width: 220px !important;
+  max-width: calc(100vw - 32px) !important;
+  left: 8px !important;
+  right: 8px !important;
+  position: fixed !important;
+  box-sizing: border-box !important;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-simple-menu {
+  width: auto !important;
+  min-width: 100% !important;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger.active .eael-nav-menu-wrapper {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+</style>
 <script>
 (function(){
     function activateEaelHamburger() {
@@ -636,11 +665,20 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
             btn.addEventListener('click', function(event) {
                 event.preventDefault();
                 var isOpen = container.classList.toggle('active');
+                var containerRect = container.getBoundingClientRect();
                 if (isOpen) {
                     wrapper.style.setProperty('display', 'block', 'important');
                     wrapper.style.setProperty('opacity','1','important');
                     wrapper.style.setProperty('visibility','visible','important');
                     wrapper.style.setProperty('transform','translateY(0)','important');
+                    wrapper.style.setProperty('position', 'fixed', 'important');
+                    wrapper.style.setProperty('top', (containerRect.bottom + 8) + 'px', 'important');
+                    wrapper.style.setProperty('left', '8px', 'important');
+                    wrapper.style.setProperty('right', '8px', 'important');
+                    wrapper.style.setProperty('width', 'auto', 'important');
+                    wrapper.style.setProperty('min-width', '220px', 'important');
+                    wrapper.style.setProperty('max-width', 'calc(100vw - 16px)', 'important');
+                    wrapper.style.setProperty('z-index', '99999', 'important');
                 } else {
                     wrapper.style.setProperty('opacity','0','important');
                     wrapper.style.setProperty('visibility','hidden','important');
