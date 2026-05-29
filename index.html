@@ -37,6 +37,48 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="stylesheet" id="elementor-post-7-css" href="./Psicologa Beatriz Mota – Atendimento Psicológico Online_files/post-7.css" media="all">
 <link rel="stylesheet" id="eael-general-css" href="./Psicologa Beatriz Mota – Atendimento Psicológico Online_files/general.min.css" media="all">
 <link rel="stylesheet" id="eael-51-css" href="./Psicologa Beatriz Mota – Atendimento Psicológico Online_files/eael-51.css" media="all">
+<style id="custom-mobile-menu-fix-inline-css">
+.eael-simple-menu-container.eael-simple-menu-hamburger { position: relative; }
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-simple-menu-toggle { display: block !important; }
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-nav-menu-wrapper {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    z-index: 9999;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger.active .eael-nav-menu-wrapper {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-simple-menu {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger.active .eael-simple-menu-horizontal,
+.eael-simple-menu-container.eael-simple-menu-hamburger.active .eael-simple-menu-vertical {
+    display: flex !important;
+    flex-direction: column !important;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-simple-menu > li {
+    width: 100%;
+}
+.eael-simple-menu-container.eael-simple-menu-hamburger .eael-simple-menu > li > a {
+    display: block;
+    padding: 0.75rem 1rem;
+}
+</style>
 <link rel="stylesheet" id="widget-image-css" href="./Psicologa Beatriz Mota – Atendimento Psicológico Online_files/widget-image.min.css" media="all">
 <link rel="stylesheet" id="elementor-icons-css" href="./Psicologa Beatriz Mota – Atendimento Psicológico Online_files/elementor-icons.min.css" media="all">
 <style id="elementor-icons-inline-css">
@@ -189,20 +231,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="elementor-element elementor-element-264953e eael-simple-menu-hamburger-align-right eael-hamburger--tablet elementor-widget elementor-widget-eael-simple-menu eael-hamburger--responsive" data-id="264953e" data-element_type="widget" data-widget_type="eael-simple-menu.default">
 					<style>
                         @media screen and (max-width: 1024px) {
-                            .eael-hamburger--tablet {
-                                .eael-simple-menu-horizontal,
-                                .eael-simple-menu-vertical {
-                                    display: none;
-                                }
+                            .eael-hamburger--tablet .eael-simple-menu-horizontal,
+                            .eael-hamburger--tablet .eael-simple-menu-vertical {
+                                display: none;
                             }
-                            .eael-hamburger--tablet {
-                                .eael-simple-menu-container .eael-simple-menu-toggle {
-                                    display: block;
-                                }
+                            .eael-hamburger--tablet .eael-simple-menu-container .eael-simple-menu-toggle {
+                                display: block;
                             }
                         }
                     </style>            <div data-hamburger-icon="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon icon-menu1&quot;&gt;&lt;/i&gt;" data-indicator-icon="&lt;svg aria-hidden=&quot;true&quot; class=&quot;e-font-icon-svg e-fas-angle-down&quot; viewBox=&quot;0 0 320 512&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-dropdown-indicator-icon="&lt;svg class=&quot;e-font-icon-svg e-fas-angle-down&quot; viewBox=&quot;0 0 320 512&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" class="eael-simple-menu-container eael-simple-menu-align-left eael-simple-menu--stretch eael-simple-menu-dropdown-align-left preset-1 eael-simple-menu-hamburger" data-hamburger-breakpoints="{&quot;mobile&quot;:&quot;Dispositivos m\u00f3veis no modo retrato (&gt; 767px)&quot;,&quot;tablet&quot;:&quot;Tablet no modo retrato (&gt; 1024px)&quot;,&quot;desktop&quot;:&quot;Desktop (&gt; 2400px)&quot;,&quot;none&quot;:&quot;Nenhum&quot;}" data-hamburger-device="tablet">
-                <span class="eael-simple-menu-toggle-text"></span><nav class="eael-nav-menu-wrapper" style="position: absolute; width: 958.4px; left: -418.15px;"><ul id="menu-geral" class="eael-simple-menu eael-simple-menu-dropdown-animate-to-top eael-simple-menu-indicator eael-simple-menu-horizontal eael-simple-menu-responsive"><li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="#servicos" class="eael-menu-servicos eael-item-active">Serviços</a></li>
+                <span class="eael-simple-menu-toggle-text"></span><nav class="eael-nav-menu-wrapper"><ul id="menu-geral" class="eael-simple-menu eael-simple-menu-dropdown-animate-to-top eael-simple-menu-indicator eael-simple-menu-horizontal eael-simple-menu-responsive"><li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="#servicos" class="eael-menu-servicos eael-item-active">Serviços</a></li>
 <li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a href="#sobre-mim" class="">Sobre Mim</a></li>
 <li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58"><a href="#depoimentos" class="">Depoimentos</a></li>
 <li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a href="https://wa.me/5511950643209">Entre em Contato</a></li>
@@ -226,16 +264,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="elementor-element elementor-element-264953e eael-simple-menu-hamburger-align-right eael-hamburger--tablet elementor-widget elementor-widget-eael-simple-menu eael-hamburger--not-responsive" data-id="264953e" data-element_type="widget" data-widget_type="eael-simple-menu.default">
 					<style>
                         @media screen and (max-width: 1024px) {
-                            .eael-hamburger--tablet {
-                                .eael-simple-menu-horizontal,
-                                .eael-simple-menu-vertical {
-                                    display: none;
-                                }
+                            .eael-hamburger--tablet .eael-simple-menu-horizontal,
+                            .eael-hamburger--tablet .eael-simple-menu-vertical {
+                                display: none;
                             }
-                            .eael-hamburger--tablet {
-                                .eael-simple-menu-container .eael-simple-menu-toggle {
-                                    display: block;
-                                }
+                            .eael-hamburger--tablet .eael-simple-menu-container .eael-simple-menu-toggle {
+                                display: block;
                             }
                         }
                     </style>            <div data-hamburger-icon="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon icon-menu1&quot;&gt;&lt;/i&gt;" data-indicator-icon="&lt;svg aria-hidden=&quot;true&quot; class=&quot;e-font-icon-svg e-fas-angle-down&quot; viewBox=&quot;0 0 320 512&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-dropdown-indicator-icon="&lt;svg class=&quot;e-font-icon-svg e-fas-angle-down&quot; viewBox=&quot;0 0 320 512&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" class="eael-simple-menu-container eael-simple-menu-align-left eael-simple-menu--stretch eael-simple-menu-dropdown-align-left preset-1" data-hamburger-breakpoints="{&quot;mobile&quot;:&quot;Dispositivos m\u00f3veis no modo retrato (&gt; 767px)&quot;,&quot;tablet&quot;:&quot;Tablet no modo retrato (&gt; 1024px)&quot;,&quot;desktop&quot;:&quot;Desktop (&gt; 2400px)&quot;,&quot;none&quot;:&quot;Nenhum&quot;}" data-hamburger-device="tablet">
@@ -548,4 +582,31 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
+<script>
+(function(){
+    function activateEaelHamburger() {
+        document.querySelectorAll('.eael-simple-menu-container.eael-simple-menu-hamburger').forEach(function(container) {
+            var btn = container.querySelector('.eael-simple-menu-toggle');
+            if (!btn || container.classList.contains('eael-hamburger-ready')) {
+                return;
+            }
+            container.classList.add('eael-hamburger-ready');
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                container.classList.toggle('active');
+            });
+            container.querySelectorAll('.eael-simple-menu a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    container.classList.remove('active');
+                });
+            });
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', activateEaelHamburger);
+    } else {
+        activateEaelHamburger();
+    }
+})();
+</script>
 </html>
